@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>param-data测试</title>
+</head>
+<body>
+
+<script src="param-data.js"></script>
+<script>
+
+var query = {
+  name: 'bestime',
+  skills: ['javascript', 'nodejs', { other: '测试数据' }]
+}
+
+var data = ParamData(query); 
+console.log(decodeURIComponent(data))； // => name=bestime&skills[]=javascript&skills[]=nodejs&skills[2][other]=测试数据
+</script>
+  
+</body>
+</html>
