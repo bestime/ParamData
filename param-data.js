@@ -28,8 +28,7 @@
     
     buildParam('', data)
     function buildParam (prefix, item) {
-      var index;
-      var objKey;
+      var index, objKey;
       if(prefix) {
         switch (getType(item)) {
           case 'Array':
